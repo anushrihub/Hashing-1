@@ -1,9 +1,7 @@
 # https://leetcode.com/problems/isomorphic-strings/
 
 # In this program to check the isomorphic string, created two hashmaps. Iterated over the hashmaps and checked whether the character in one hashmap mapped to the same character in other map.
-# Time Complexity O(n) - Because of the iteration over the two string 2n but we consider it as n. 
-# Space Complexity O(1) becuase the only the characters are coming which is 26 means it's constant
-
+# Time Complexity O(n), Space Complexity O(1)
 
 class Solution:
     def isIsomorphic(self, s: str, t: str) -> bool:
@@ -34,23 +32,6 @@ class Solution:
             else:
                 tMap[tChar] = sChar
         return True
-
-# using zip function
-
-def isIsomorphic(self, s: str, t: str) -> bool:
-    sMap = {}
-    tMap = {}
-
-    for sc, tc in zip(s, t):
-        if sc in sMap and sMap[sc] != tc:
-            return False
-        if tc in tMap and tMap[tc] != sc:
-            return False
-        
-        sMap[sc] = tc
-        tMap[tc] = sc
-
-    return True
 
 
 sh =Solution()
