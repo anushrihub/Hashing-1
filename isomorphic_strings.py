@@ -5,15 +5,15 @@
 
 class Solution:
     def isIsomorphic(self, s: str, t: str) -> bool:
-        # handeling the edge case
+        # handel the edge case
         if len(s) != len(t):
             return False
 
-        # created two hashmaps for two strings
+        # create two hashmaps for two strings
         sMap = {}
         tMap = {}
 
-        # iterating over both strings
+        # iterate over both strings
         for i in range(len(s)):
             sChar = s[i]
             tChar = t[i]
