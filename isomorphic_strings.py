@@ -5,7 +5,7 @@
 
 class Solution:
     def isIsomorphic(self, s: str, t: str) -> bool:
-        # handel the edge case
+        # handle the edge case
         if len(s) != len(t):
             return False
 
@@ -13,23 +13,23 @@ class Solution:
         sMap = {}
         tMap = {}
 
-        # iterate over both strings
+        # iterate over the strings(string 't' also has the same length so considered only 's')
         for i in range(len(s)):
             sChar = s[i]
             tChar = t[i]
             # check the string 's' characters
             if sChar in sMap:
-                #  if we are checking the same 's' character, then it should map to same 't' character
+                # if we are checking the previously present 's' character, then it should map to same 't' character
                 if sMap[sChar] != tChar:
                     # if it's not equal return False
-                 return False
+                    return False
             # if we are checking the character for the first time
             else:
                 # add into the map
                 sMap[sChar] = tChar
             # check the string 't' characters
             if tChar in tMap:
-                # if we are checking the same 't' character, then it should map to same 's' character
+                # if we are checking the previously present 't' character, then it should map to same 's' character
                 if tMap[tChar] != sChar:
                     return False
             # if we are checking the character for the first time
