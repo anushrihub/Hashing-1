@@ -5,6 +5,10 @@
 
 class Solution:
     def isIsomorphic(self, s: str, t: str) -> bool:
+        # handeling the edge case
+        if len(s) != len(t):
+            return False
+
         # created two hashmaps for two strings
         sMap = {}
         tMap = {}
